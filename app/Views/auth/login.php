@@ -13,9 +13,9 @@
 			<form action="<?= base_url('auth/check') ?>" method="post" autocomplete="off">
 				<?= csrf_field(); ?>
 
-				<?php if(!empty(session()->getFlashdata('fail'))): ?>
+				<!-- <?php if(!empty(session()->getFlashdata('fail'))): ?>
 				<div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
-				<?php endif ?>
+				<?php endif ?> -->
 
 				<div class="form-group">
 					<label for="">Email</label>

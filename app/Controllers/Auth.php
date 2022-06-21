@@ -73,9 +73,10 @@ class Auth extends BaseController
             $password   = $this->request->getPost('password');
 
             $values =[
-                'name' => $name,
-                'email' => $email,
+                'name'     => $name,
+                'email'    => $email,
                 'password' => Hash::make($password),
+                'activated'=> '1',
             ];
 
             $userModel = New UsersModel();
