@@ -4,12 +4,17 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\UsersModel;
 use App\Libraries\Hash;
+use App\Libraries\MyAuth;
 
 class Auth extends BaseController
 {
 
+    public $myauth;
+
     public function __construct(){
         helper(['url','form']);
+        
+        $this->myauth = new MyAuth();
     }
 
     public function index()
@@ -133,15 +138,20 @@ class Auth extends BaseController
             }else{
                 $user_id = $user_info['id'];
                 session()->set('loggedUser', $user_id);
+                //$this->myauth->setUserSession($user_id);
                 return redirect()->to('/dashboard');
             }
         }
     }
 
     public function logout(){
-        if (session()->has('loggedUser')) {
+        /*if (session()->has('loggedUser')) {
             session()->remove('loggedUser');
             return redirect()->to('/auth?access=out')->with('fail','your are logged out');
-        }
+        }*/
+
+        $this->myauth->logout();
+        return redirect()->to('/auth?access=out')->with('fail','your are logged out');
+
     }
 }

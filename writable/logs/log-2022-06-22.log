@@ -1,0 +1,30 @@
+CRITICAL - 2022-06-22 00:29:36 --> Undefined property: App\Libraries\MyAuth::$setUserSession
+in APPPATH\Libraries\MyAuth.php on line 107.
+ 1 APPPATH\Libraries\MyAuth.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\MyAuth::$setUserSession', 'APPPATH\\Libraries\\MyAuth.php', 107)
+ 2 APPPATH\Controllers\Auth.php(153): App\Libraries\MyAuth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Auth->logout()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-22 00:32:19 --> Too few arguments to function App\Libraries\MyAuth::setUserSession(), 0 passed in C:\xampp\htdocs\login\app\Libraries\MyAuth.php on line 107 and exactly 1 expected
+in APPPATH\Libraries\MyAuth.php on line 57.
+ 1 APPPATH\Libraries\MyAuth.php(107): App\Libraries\MyAuth->setUserSession()
+ 2 APPPATH\Controllers\Auth.php(153): App\Libraries\MyAuth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Auth->logout()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-22 03:55:12 --> Trying to access array offset on value of type null
+in APPPATH\Views\dashboard\index.php on line 24.
+ 1 APPPATH\Views\dashboard\index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\dashboard\\index.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(29): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
