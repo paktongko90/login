@@ -81,7 +81,7 @@ class Auth extends BaseController
                 'name'     => $name,
                 'email'    => $email,
                 'password' => Hash::make($password),
-                'activated'=> '1',
+                'status'=> '1',
             ];
 
             $userModel = New UsersModel();

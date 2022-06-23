@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Dashboard</title>
-	<link rel="stylesheet" type="text/css" href="<?= base_url('bootstrap/css/bootstrap.min.css') ?>">
-</head>
-<body>
-	<div class="container">
-		<div class="row" style="margin-top: 40px;">
-			<div class="col-md-4 col-md-offset-4">
-				<h4>Dashboard</h4>
+<?= $this->extend('layout/dashboard-layout'); ?>
+<?= $this->section('content'); ?>
 				<table class="table table-hover">
 					<thead>
 						<tr>
@@ -27,8 +16,4 @@
 						</tr>
 					</tbody>
 				</table>
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+<?= $this->endSection() ?>
