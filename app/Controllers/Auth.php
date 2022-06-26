@@ -154,4 +154,26 @@ class Auth extends BaseController
         return redirect()->to('/auth?access=out')->with('fail','your are logged out');
 
     }
+
+    public function getUser(){
+
+        $users = $this->myauth->getAllUsers();
+        $data = [
+            'users' => $users,
+            'userInfo' => $this->myauth->isLoggedin()
+        ];
+        //var_dump($data['users'] = $userModel->findAll());
+        //print_r($data['users'] = $userModel->findAll());
+        return view('users/index',$data);
+    }
+
+    public function viewUser($id = null){
+        $user = $this->myauth->getUserDetails($id);
+        print_r($user);
+    }
+
+    public function deleteUser($id = null){
+        $user = $this->myauth->deleteUser($id);
+        return redirect()->back();
+    }
 }
