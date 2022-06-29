@@ -54,16 +54,26 @@ if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
 
-//$routes->get('register','RegisterController::index');
+$routes->post('/auth/check', 'Auth::check');
+//$routes->get('auth/viewuser/(:num)','Auth::viewUser/$id');
+
 
 $routes->group('',['filter' => 'AuthCheck'], function($routes){
     $routes->get('/dashboard', 'Dashboard::index');
     $routes->get('/', 'Dashboard::index');
-    $routes->post('/check', 'Auth::check');
-    $routes->get('/user', 'Auth::getuser');
+    $routes->get('/auth/logout', 'Auth::logout');
+    $routes->get('/user', 'Auth::getUser');
+    
 });
 
 $routes->group('',['filter' => 'AlreadyLoggedIn'], function($routes){
     $routes->get('/auth', 'Auth::index');
 });
 
+$routes->group('demo', function ($routes){
+    $routes->get('action1', 'Demo::index');
+    $routes->get('action2', 'Demo::index2');
+    $routes->post('action2', 'Demo::index2_post');
+    $routes->get('action3/(:num)', 'Demo::index3/$1');
+    $routes->get('action4/(:any)/(:any)', 'Demo::index4/$1/$2');
+});

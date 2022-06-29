@@ -101,6 +101,7 @@ class Auth extends BaseController
     }
 
     public function check(){
+
         //validate user input from login form
 
         $validation = $this->validate([
@@ -167,9 +168,10 @@ class Auth extends BaseController
         return view('users/index',$data);
     }
 
-    public function viewUser($id = null){
-        $user = $this->myauth->getUserDetails($id);
-        print_r($user);
+    public function viewUser($id){
+        $user = new UsersModel();
+        $data['user'] = $user->getUser($id)->getRow();
+        return view('users/viewuser', $data);
     }
 
     public function deleteUser($id = null){

@@ -71,10 +71,13 @@ class MyAuth{
      * @return details
      */
 
-    public function getUserDetails($id){
-        $user = $this->user->where('id',$id)->first();
-        return $user;
-    }
+    /*public function getUserDetails($id = false){
+        if ($id === false) {
+            return $this->findAll();
+        }else{
+            return $this->getwhere
+        }
+    }*/
 
     /**
      *--------------------------------------------------------------------------

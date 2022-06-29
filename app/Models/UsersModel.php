@@ -17,6 +17,14 @@ class UsersModel extends Model{
     protected $createdField         = 'created_at';
     protected $updatedField         = 'updated_at';
 
+    public function getUser($id = false){
+        if($id == false){
+            return $this->findAll();
+        }else{
+            return $this->getWhere(['id' => $id]);
+        }
+    }
+
 }
 
 ?>
