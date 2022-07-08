@@ -1,0 +1,115 @@
+CRITICAL - 2022-07-07 03:52:44 --> Class 'App\Models\RolesModel' not found
+in APPPATH\Controllers\RolesController.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\RolesController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RolesController))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-07 03:54:08 --> Undefined variable: model
+in APPPATH\Controllers\RolesController.php on line 11.
+ 1 APPPATH\Controllers\RolesController.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: model', 'APPPATH\\Controllers\\RolesController.php', 11, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\RolesController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RolesController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-07 04:43:48 --> Undefined index: created_date
+in APPPATH\Views\roles\index.php on line 31.
+ 1 APPPATH\Views\roles\index.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: created_date', 'APPPATH\\Views\\roles\\index.php', 31, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\roles\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('roles/index', [], true)
+ 5 APPPATH\Controllers\RolesController.php(15): view('roles/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\RolesController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RolesController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-07 06:10:06 --> Undefined variable: roles
+in APPPATH\Controllers\RolesController.php on line 36.
+ 1 APPPATH\Controllers\RolesController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: roles', 'APPPATH\\Controllers\\RolesController.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\RolesController->editRole('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RolesController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-07 06:10:29 --> Undefined variable: roles
+in APPPATH\Controllers\RolesController.php on line 36.
+ 1 APPPATH\Controllers\RolesController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: roles', 'APPPATH\\Controllers\\RolesController.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\RolesController->editRole('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RolesController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-07 06:10:52 --> Call to a member function getRow() on array
+in APPPATH\Controllers\RolesController.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\RolesController->editRole('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RolesController))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-07 06:10:58 --> Call to a member function getRow() on array
+in APPPATH\Controllers\RolesController.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\RolesController->editRole('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RolesController))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-07 06:12:02 --> Invalid file: roles/edit.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('roles/edit.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('roles/edit', [], true)
+ 3 APPPATH\Controllers\RolesController.php(38): view('roles/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\RolesController->editRole('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RolesController))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-07 07:08:40 --> Trying to get property 'role_name' of non-object
+in APPPATH\Views\roles\editrole.php on line 4.
+ 1 APPPATH\Views\roles\editrole.php(4): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'role_name\' of non-object', 'APPPATH\\Views\\roles\\editrole.php', 4, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\roles\\editrole.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('roles/editrole', [], true)
+ 5 APPPATH\Controllers\RolesController.php(39): view('roles/editrole', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\RolesController->editRole('$id')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RolesController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-07 07:08:58 --> Trying to get property 'role_name' of non-object
+in APPPATH\Views\roles\editrole.php on line 4.
+ 1 APPPATH\Views\roles\editrole.php(4): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'role_name\' of non-object', 'APPPATH\\Views\\roles\\editrole.php', 4, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\roles\\editrole.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('roles/editrole', [], true)
+ 5 APPPATH\Controllers\RolesController.php(39): view('roles/editrole', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\RolesController->editRole('$id')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RolesController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-07 07:10:03 --> Undefined property: stdClass::$product_id
+in APPPATH\Views\roles\editrole.php on line 5.
+ 1 APPPATH\Views\roles\editrole.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$product_id', 'APPPATH\\Views\\roles\\editrole.php', 5, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\roles\\editrole.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('roles/editrole', [], true)
+ 5 APPPATH\Controllers\RolesController.php(39): view('roles/editrole', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\RolesController->editRole('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RolesController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-07 07:10:21 --> Undefined property: stdClass::$product_id
+in APPPATH\Views\roles\editrole.php on line 5.
+ 1 APPPATH\Views\roles\editrole.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$product_id', 'APPPATH\\Views\\roles\\editrole.php', 5, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\roles\\editrole.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('roles/editrole', [], true)
+ 5 APPPATH\Controllers\RolesController.php(39): view('roles/editrole', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\RolesController->editRole('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RolesController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

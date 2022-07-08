@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Sign Up</title>
-	<link rel="stylesheet" type="text/css" href="<?= base_url('bootstrap/css/bootstrap.min.css') ?>">
-</head>
-<body>
-	<div class="container">
-		<div class="col-md-4 col-md-offset-4">
-			<h4>Sign Up</h4><hr>
+<?= $this->extend('layout/dashboard-layout'); ?>
+<?= $this->section('content'); ?>
+<div class="card">
+	<div class="card-header">
+		<div class="card-body">
 			<form action="<?= base_url('auth/save') ?>" method="post" autocomplete="off">
 				<?= csrf_field(); ?>
 				<?php if(!empty(session()->getFlashdata('fail'))): ?>
@@ -43,10 +36,11 @@
 				<div class="form-group">
 					<button class="btn btn-primary btn-block" type="submit">Sign Up</button>
 				</div>
-				<br>
-				<a href="<?= site_url('auth') ?>">I Already have account, Login Now</a>
+
 			</form>
 		</div>
+		</div>
 	</div>
-</body>
-</html>
+</div>
+		
+<?= $this->endSection() ?>

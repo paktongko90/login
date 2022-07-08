@@ -1,1 +1,0 @@
-__ci_last_regenerate|i:1656301835;_ci_previous_url|s:26:"http://localhost:8080/auth";fail|s:18:"Incorrect Password";__ci_vars|a:2:{s:4:"fail";s:3:"old";s:13:"_ci_old_input";s:3:"old";}_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:3:{s:14:"csrf_test_name";s:32:"61c91d2dd8811412fc62a893a5ab8184";s:5:"email";s:16:"jamali@gmail.com";s:8:"password";s:9:"asdasdasd";}}

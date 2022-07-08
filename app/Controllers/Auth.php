@@ -23,7 +23,10 @@ class Auth extends BaseController
     }
 
     public function register(){
-        return view('auth/register');
+        $data = [
+            'pageTitle' => 'Create User',
+        ];
+        return view('auth/register',$data);
     }
 
     public function save(){
@@ -160,6 +163,7 @@ class Auth extends BaseController
 
         $users = $this->myauth->getAllUsers();
         $data = [
+            'pageTitle' => 'User',
             'users' => $users,
             'userInfo' => $this->myauth->isLoggedin()
         ];
@@ -168,9 +172,12 @@ class Auth extends BaseController
         return view('users/index',$data);
     }
 
-    public function viewUser($id){
+    public function viewUserDetails($id){
         $user = new UsersModel();
-        $data['user'] = $user->getUser($id)->getRow();
+        $data = [
+            'user' => $user->getUser($id)->getRow(),
+            'userInfo' => $this->myauth->isLoggedin()
+        ];
         return view('users/viewuser', $data);
     }
 

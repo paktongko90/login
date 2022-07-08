@@ -63,6 +63,9 @@ $routes->group('',['filter' => 'AuthCheck'], function($routes){
     $routes->get('/', 'Dashboard::index');
     $routes->get('/auth/logout', 'Auth::logout');
     $routes->get('/user', 'Auth::getUser');
+    $routes->get('/user/viewuser/(:num)', 'Auth::viewUserDetails/$1');
+    $routes->get('/auth/register', 'Auth::Register');
+    $routes->post('/auth/save', 'Auth::save');
     
 });
 
@@ -76,4 +79,16 @@ $routes->group('demo', function ($routes){
     $routes->post('action2', 'Demo::index2_post');
     $routes->get('action3/(:num)', 'Demo::index3/$1');
     $routes->get('action4/(:any)/(:any)', 'Demo::index4/$1/$2');
+});
+
+$routes->group("user",function($routes){
+    $routes->get('home','UserController::index',['as' => 'user.home']);
+});
+$routes->group("roles",function($routes){
+    $routes->get('','RolesController::index',['as' => 'roles']);
+    $routes->post('save','RolesController::SaveRole',['as' => 'roles.save']);
+    $routes->get('create','RolesController::createRole',['as' => 'roles.create']);
+    $routes->get('edit/(:num)','RolesController::editRole/$1',['as' => 'roles.edit']);
+    $routes->post('update','RolesController::updateRole',['as' => 'roles.update']);
+    $routes->get('delete/(:num)','RolesController::deleteRole/$1',['as' => 'roles.delete']);
 });

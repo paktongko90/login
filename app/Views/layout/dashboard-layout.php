@@ -164,7 +164,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">PMS System</span>
     </a>
 
     <!-- Sidebar -->
@@ -175,7 +175,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?= ucfirst($userInfo['name']); ?></a>
+          <a href="#" class="d-block">Administrator</a>
         </div>
       </div>
 
@@ -196,7 +196,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-           <li class="nav-item">
+          <li class="nav-item">
+            <a href="<?= route_to('/') ?>" class="nav-link <?= (current_url() == base_url('user/home')) ? 'active' : ''; ?>">
+              <i class="nav-icon fas fa-home"></i>
+              <p>
+                Home
+              </p>
+            </a>
+          </li>
+               <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-cog"></i>
               <p>
@@ -206,15 +214,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="<?= route_to('user') ?>" class="nav-link <?= (current_url() == base_url('user')) ? 'active' : ''; ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>User</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="<?= route_to('roles') ?>" class="nav-link <?= (current_url() == base_url('roles')) ? 'active' : ''; ?>">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Group</p>
+                  <p>Role</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -224,14 +232,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link <?= (current_url() == base_url('/dashboard')) ? 'active' : ''; ?>">
-              <i class="nav-icon fas fa-home"></i>
-              <p>
-                Home
-              </p>
-            </a>
           </li>
         </ul>
       </nav>
@@ -247,12 +247,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Starter Page</h1>
+            <h1 class="m-0"><?= (isset($pageTitle)) ? $pageTitle : 'Document'; ?></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Starter Page</li>
+              <li class="breadcrumb-item"><a href="<?= route_to('/'); ?>">Home</a></li>
+              <li class="breadcrumb-item active"><?= (isset($pageTitle)) ? $pageTitle : 'Document'; ?></li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -292,5 +292,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
+<script>
+document.getElementById("curtainInput").addEventListener(
+  "click",
+  function(event) {
+    if (event.target.value === "Edit") {
+      event.target.value = "Save";
+    } else {
+      event.target.value = "Edit";
+    }
+  },
+  false
+);
+
+function myFunction(){
+  document.getElementById("myText").disabled = false;
+}
+</script>
 </body>
 </html>

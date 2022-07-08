@@ -23,7 +23,7 @@ class Dashboard extends BaseController
         ];*/
 
         $data = [
-            'title' => 'Dashboard',
+            'pageTitle' => 'Dashboard',
             'userInfo' => $this->myauth->isLoggedin()
         ];
         
